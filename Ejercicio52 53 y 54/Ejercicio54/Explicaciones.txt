@@ -1,0 +1,26 @@
+package dominio;
+public class C {
+private int a, b;
+public C(int a, int b)
+{
+this.a = a;
+this.b = b;
+}
+}
+
+package aplicacion;
+import dominio.C;
+public class Principal {
+public static void main(String[] args) {
+C c = new C();
+System.out.println(c);
+}
+}
+
+- En este código hay un error de compilación muy común, éste es básicamente que se está intentando
+printear en pantalla el valor de un objeto creado. El problema es que java por defecto cuando
+se intenta mostrar algo en pantalla mediante el System.out.print(); para mostrar un objeto,
+Java llama a la clase objeto Object.toString(); y este de forma predeterminada retorna un mensaje
+con un @ seguido por un hashcode. Por tanto, para conseguir printear el objeto deseado, hay
+que usar el metodo toString(); para mostrar el contenido del objeto que se haya creado y no
+su dirección.

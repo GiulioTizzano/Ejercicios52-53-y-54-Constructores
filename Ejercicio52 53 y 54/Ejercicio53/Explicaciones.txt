@@ -1,0 +1,20 @@
+package dominio;
+public class A {
+}
+
+
+package dominio;
+public class B extends A {
+private int a, b;
+public B(int a, int b)
+{
+super(a, b);
+this.a = a
+
+this.b = b;
+}
+}
+- Todo este código da error porque las clases están usando la propiedad de herencia, puesto que
+la clase B se está extendiedo a la clase A, es decir que la clase B adquiere los atributos
+y metodos definidos en la clase A que son NULAS. Por tanto el programa no hace nada, puesto que
+solo estña compuesto de una clase vacía.
